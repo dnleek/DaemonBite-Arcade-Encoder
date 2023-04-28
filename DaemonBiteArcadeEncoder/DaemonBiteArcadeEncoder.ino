@@ -77,7 +77,7 @@ void setup()
   DDRB  &= ~B01111110; // Set PB1-PB6 as inputs
   PORTB |=  B01111110; // Enable internal pull-up resistors
   DDRC  &= ~B01000000; // Set PC6 as input
-  PORCT |=  B01000000; // Enable internal pull-up resistors 
+  PORTC |=  B01000000; // Enable internal pull-up resistors 
 
   // Debounce selector switch (currently disabled)
   DDRE  &= ~B01000000; // Pin 7 as input
