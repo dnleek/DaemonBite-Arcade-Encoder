@@ -1,3 +1,12 @@
+# Fork of DaemonBite-Arcade-Encoder
+This repo is a fork of [MickGyver/DaemonBite-Arcade-Encoder](https://github.com/MickGyver/DaemonBite-Arcade-Encoder). The main differences are:
+* Added support for a 13th button on pin 5 (PC6), originally from [Ryan-Myers/DaemonBite-Arcade-Encoder](https://github.com/Ryan-Myers/DaemonBite-Arcade-Encoder)
+* Added a new sketch for an XInput encoder. This sketch uses the [ArduinoXInput library.](https://github.com/dmadison/ArduinoXInput)
+
+The Xinput sketch is separate from the original DaemonBite sketch because they require different boards. The ArduinoXInput library requires the use of one of several modified XInput compatible boards, for example the [ArduinoXInput_AVR board](https://github.com/dmadison/ArduinoXInput_AVR). These XInput boards do not support USB HID, so the same sketch cannot depend on both HID.h and XInput. So for now, you cannot easily swap between normal DaemonBite and XInput compatible DaemonBite, you must reflash the pro micro.
+
+I have additionally updated some of the images below. The encoder wiring diagram shows which pin is the new button (B13) and the encoder layout diagram has been updated to show how the buttons map to XInput (the green Xbox 360 text). Original documentation continues below.
+
 # DaemonBite-Arcade-Encoder
 This is an arcade controller project for the MiSTer FPGA project and any other device accepting USB HID joysticks using an Arduino Pro Micro. This project can also be used to create a NeoGeo/Atari/Commodore/Amiga controller to USB adapters.
 
